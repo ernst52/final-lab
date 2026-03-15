@@ -11,12 +11,12 @@
 
 ## 2. ส่วนที่รับผิดชอบ
 
-- Auth Service — ระบบ Login ด้วย Seed Users + JWT
-- Task Service — REST API สำหรับ CRUD Tasks พร้อม Role-based Access
-- Log Service — บันทึก Log ลง PostgreSQL ผ่าน REST API
-- Nginx — ตั้งค่า HTTPS ด้วย Self-Signed Certificate และ Reverse Proxy
-- Docker Compose — กำหนด Service, Network และ Environment ทั้งระบบ
-- Frontend — หน้า Task Board (index.html) และ Log Dashboard (logs.html)
+- Auth Service ระบบ Login ด้วย Seed Users + JWT
+- Task Service REST API สำหรับ CRUD Tasks พร้อม Role-based Access
+- Log Service บันทึก Log ลง PostgreSQL ผ่าน REST API
+- Nginx ตั้งค่า HTTPS ด้วย Self-Signed Certificate และ Reverse Proxy
+- Docker Compose กำหนด Service, Network และ Environment ทั้งระบบ
+- Frontend หน้า Task Board (index.html) และ Log Dashboard (logs.html)
 
 ---
 
@@ -39,7 +39,7 @@
 #### `loadProfile()` เรียก `/api/users/me` บ่ได้หน้า profile แหลวไม่โหลด  
 - นึกได้ว่ายังไม่มี user-service เลยแก้ให้ใช้ข้อมูลจาก `currentUser` โดยตรงแทนการเรียก API 
 #### bcrypt hash ใน `db/init.sql` เป็น placeholder ทำให้ login ไม่ได้ 
-- รัน `bcrypt.hashSync()` ใน auth-service แล้วแทนค่าใน init.sql |
+- รัน `bcrypt.hashSync()` ใน auth-service แล้วแทนค่าใน init.sql 
 #### `node -e` รัน bcrypt บ่ได้เพราะไม่มี module 
 - ต้อง `cd auth-service && npm install` ก่อนแล้วค่อยรัน เพราะ auth-service มี module อยู่แล้ว
 #### Frontend พังกระจุย กดปุ่มไรไม่ได้เลย
