@@ -1,0 +1,42 @@
+# dependencies
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment variables
+
+.env
+.env.*
+!.env.example
+
+# logs
+
+logs
+*.log
+
+# docker
+
+docker-compose.override.yml
+
+# build output
+
+dist/
+build/
+
+# OS junk
+
+.DS_Store
+Thumbs.db
+
+# editors
+
+.vscode/
+.idea/
+*.swp
+
+# certificates (important)
+
+nginx/certs/*.pem
+
